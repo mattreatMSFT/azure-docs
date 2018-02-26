@@ -75,7 +75,7 @@ $CloudBlockBlob = [Microsoft.WindowsAzure.Storage.Blob.CloudBlockBlob] $Blob.ICl
 $blockList = $CloudBlockBlob.DownloadBlockList()
 ```
 
-The `$blockList` variable returns a list of the blocks in the blob. Each block blob contains at least two blocks.  The first block has a length of `21` bytes, this block contains the opening brackets of the json log. The other block is the closing brackets and has a length of `9` bytes.  As you can see the following example log has seven entries in it, each being an individual entry. All new entries in the log are added to the end right before the final block.
+The `$blockList` variable returns a list of the blocks in the blob. Each block blob contains at least two blocks.  The first block has a length of `12` bytes, this block contains the opening brackets of the json log. The other block is the closing brackets and has a length of `2` bytes.  As you can see the following example log has seven entries in it, each being an individual entry. All new entries in the log are added to the end right before the final block.
 
 ```
 Name                                         Length Committed
